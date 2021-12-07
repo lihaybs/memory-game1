@@ -107,12 +107,14 @@ let compareF = (obj) => {
       setTimeout(() => {
         compare[0].innerHTML = ``;
         compare[1].innerHTML = ``;
-      }, 2000);
+        compare[0].onclick = cardClicked;
+        compare[1].onclick = cardClicked;
+      }, 800);
     }
     setTimeout(() => {
       compare = [];
       i = 0;
-    }, 2200);
+    }, 1000);
   }
 };
 
@@ -128,6 +130,7 @@ let compareF = (obj) => {
 const cardClicked = (evn) => {
   if (i != 2) {
     const cardEl = evn.target;
+    cardEl.onclick=``;
     const idx = cardEl.id;
     // console.log(cards[idx]);
     cardEl.innerHTML = cards[idx].name;
@@ -161,9 +164,6 @@ function main() {
   }
 }
 
-const f = () => {
-  alert(`Hello`);
-};
 
 window.onload = () => {
   main();

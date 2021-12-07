@@ -57,7 +57,17 @@ body {
     justify-content: center;
     font-size: xx-large;
     font-family: cursive;
+    width: 100px;
+    height: 90px;
   }
+  .card:active {
+    transition: transform .2s;
+    transform: scale(0.9);
+  }
+  /* .card.flip {
+    transform: rotateY(180deg);
+  } */
+
   .card:hover{
       background-color: lightcoral;
   }
